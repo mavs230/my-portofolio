@@ -1,6 +1,6 @@
 # Mauro Simao - Portfolio Website
 
-![Portfolio Preview](https://maurosimaoportofolio.netlify.app/) 
+ https://maurosimaoportofolio.netlify.app/
 
 A modern, responsive portfolio website showcasing projects, skills, and contact information for a Data Science and AI enthusiast.
 
