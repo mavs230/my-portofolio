@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mauro Simao - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Verified file name -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -13,6 +13,7 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -25,71 +26,168 @@
     <a href="#portfolio" class="btn">View My Work</a>
   </section>
 
-  <!-- About Section -->
+  <!-- UPDATED About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm an IT student specializing in Data Science and a graduate in Information Systems (Data Analysis). 
-      I'm passionate about using data to solve real-world problems and create impactful solutions.
-    </p>
-    <h3>Skills</h3>
-    <ul>
-      <li>Python Programming</li>
-      <li>Machine Learning</li>
-      <li>Data Visualization (Matplotlib, Seaborn, Tableau)</li>
-      <li>Web Development (HTML, CSS, JavaScript)</li>
-      <li>Data Analysis (Pandas, NumPy)</li>
-    </ul>
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a driven and analytical IT professional with a deep-seated passion for both technology and personal growth. My journey in Brazilian Jiu-Jitsu, where I've competed and coached, has instilled in me a unique blend of discipline, strategic thinking, and a love for mentoring—qualities I now channel into the world of Data Science.
+          </p>
+          <p>
+            I thrive on dissecting complex problems, whether it's anticipating an opponent's next move or cleaning and interpreting a complex dataset. I'm excited to leverage my skills in data analysis and machine learning to build impactful solutions and contribute to a forward-thinking team.
+          </p>
+        </div>
+        <img src="profile.jpg" alt="Mauro Simao professional headshot" class="about-image">
+      </div>
+
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Technical Skills</h4>
+          <ul>
+            <li>Python Programming</li>
+            <li>Machine Learning</li>
+            <li>Data Visualization (Matplotlib, Seaborn)</li>
+            <li>Data Analysis (Pandas, NumPy)</li>
+            <li>Web Development (HTML, CSS, JS)</li>
+            <li>Oracle VirtualBox</li>
+            <li>AWS (Amazon Web Services)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Soft Skills</h4>
+          <ul>
+            <li>Leadership & Mentorship</li>
+            <li>Communication</li>
+            <li>Discipline & Resilience</li>
+            <li>Problem-Solving</li>
+            <li>Strategic Thinking</li>
+            <li>Teamwork & Collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Portfolio Section -->
+  <!-- UPDATED Experience Section -->
+  <section id="experience">
+    <div class="container">
+        <h2>Experience</h2>
+        <div class="experience-grid">
+            <div class="job">
+                <h3>Jiu-Jitsu Coach</h3>
+                <h4>Home-Based Dojo | Durban, Umhlanga</h4>
+                <h5>September 2023 - Present</h5>
+                <ul>
+                    <li>Instructed groups of up to 15 students in Brazilian Jiu-Jitsu techniques, adapting teaching methods for different ages and skill levels.</li>
+                    <li>Developed strong communication, leadership, and motivational skills in a disciplined training environment.</li>
+                    <li>Managed class scheduling and student progress tracking for the dojo.</li>
+                </ul>
+            </div>
+            <img src="teaching.jpg" alt="Mauro Simao coaching Jiu-Jitsu" class="experience-image">
+        </div>
+    </div>
+  </section>
+
+
+  <!-- UPDATED Portfolio Section -->
   <section id="portfolio">
-    <h2>My Work</h2>
-    
-    <!-- Project 1: AI User Behavior Prediction -->
-    <div class="project">
-      <h3>AI User Behavior Prediction</h3>
-      <p>
-        A machine learning project that analyzes mobile user behavior using app usage time, screen on time, and demographics data.
-        The goal is to classify user behavior and provide insights for personalized recommendations.
-      </p>
-      <a href="https://github.com/mavs230/ai-user-behavior-prediction" target="_blank" class="btn">View on GitHub</a>
-    </div>
+    <div class="container">
+      <h2>My Work</h2>
+      <div class="project-grid">
 
-    <!-- Project 2: Mail Machine Learning -->
-    <div class="project">
-      <h3>Mall Machine Learning</h3>
-      <p>
-        A project focused on customer segmentation and analysis to understand mall customer behavior. 
-        This involves using machine learning techniques to group customers based on their behavior and preferences.
-      </p>
-      <a href="https://github.com/mavs230/mall_machine_learning" target="_blank" class="btn">View on GitHub</a>
-    </div>
+        <!-- Project 1: AI User Behavior Prediction -->
+        <div class="project-card">
+          <h3>AI User Behavior Prediction</h3>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Scikit-learn</span>
+          </div>
+          <p>
+            Developed a predictive model to classify mobile user behavior based on app usage and demographic data. This model provides key insights for delivering personalized user recommendations and improving engagement.
+          </p>
+          <a href="https://github.com/mavs230/ai-user-behavior-prediction" target="_blank" class="btn">View on GitHub</a>
+        </div>
 
-    <!-- Project 3: First Contributions -->
-    <div class="project">
-      <h3>First Contributions</h3>
-      <p>
-        A project to help beginners contribute to open-source projects. 
-        This includes guidelines and resources to make the first contribution process easier and more accessible.
-      </p>
-      <a href="https://github.com/mavs230/first-contributions" target="_blank" class="btn">View on GitHub</a>
+        <!-- Project 2: Mall Customer Segmentation -->
+        <div class="project-card">
+          <h3>Mall Customer Segmentation</h3>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Clustering</span>
+          </div>
+          <p>
+            Applied unsupervised machine learning (K-Means Clustering) to segment mall customers into distinct groups based on purchasing habits, helping to identify high-value segments for targeted marketing.
+          </p>
+          <a href="https://github.com/mavs230/mall_machine_learning" target="_blank" class="btn">View on GitHub</a>
+        </div>
+
+        <!-- Project 3: Netflix Data Wrangling -->
+        <div class="project-card">
+          <h3>Netflix Data Wrangling</h3>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Data Cleaning</span>
+          </div>
+          <p>
+            A data analysis project that involves loading, cleaning, and transforming the Netflix Titles dataset. The script handles missing values, renames columns, and prepares the data for analysis.
+          </p>
+          <a href="https://github.com/mavs230/my-portofolio" target="_blank" class="btn">View on GitHub</a>
+        </div>
+
+        <!-- Project 4: Netflix Data Visualization -->
+        <div class="project-card">
+          <h3>Netflix Data Visualization</h3>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span>
+          </div>
+          <p>
+            A data visualization project using Matplotlib and Seaborn to create insightful charts from the cleaned Netflix dataset. It analyzes content distribution by region, director, and duration to uncover trends.
+          </p>
+          <a href="https://github.com/mavs230/my-portofolio" target="_blank" class="btn">View on GitHub</a>
+        </div>
+
+        <!-- Project 5: MerchStore Inventory System -->
+        <div class="project-card">
+          <h3>MerchStore Inventory System</h3>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">OOP</span>
+            <span class="tag">CLI</span>
+          </div>
+          <p>
+            A command-line application built to manage product inventory, process sales, and track profit for a university merchandise store, demonstrating object-oriented principles.
+          </p>
+          <a href="https://github.com/mavs230/my-portofolio" target="_blank" class="btn">View on GitHub</a>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out for collaborations or just to say hi!</p>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for collaborations or just to say hi!</p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -102,6 +200,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script> <!-- Verified file name -->
+  <script src="script.js"></script>
 </body>
 </html>
