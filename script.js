@@ -14,54 +14,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Theme management system with localStorage persistence
-const homeSection = document.getElementById('home');
-const changeColorButton = document.createElement('button');
-const themes = [
-    'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    'linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%)',
-    'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-    'linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)'
-];
-
-// Initialize theme from localStorage or set default
-let currentThemeIndex = localStorage.getItem('themeIndex') || 0;
-homeSection.style.background = themes[currentThemeIndex];
-homeSection.style.transition = 'background 0.5s ease';
-
-// Create and style theme button
-changeColorButton.textContent = '🎨 Change Theme';
-changeColorButton.classList.add('theme-btn');
-homeSection.appendChild(changeColorButton);
-
-// Theme rotation functionality
-changeColorButton.addEventListener('click', () => {
-    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-    homeSection.style.background = themes[currentThemeIndex];
-    localStorage.setItem('themeIndex', currentThemeIndex);
-    
-    // Button animation
-    changeColorButton.style.transform = 'scale(0.95)';
-    setTimeout(() => {
-        changeColorButton.style.transform = 'scale(1)';
-    }, 100);
-});
-
 // Intersection Observer for scroll animations
 const observerOptions = {
-    threshold: 0.1,
+    threshold: 0.1, // Trigger when 10% of the element is visible
     rootMargin: '0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
             entry.target.classList.add('visible');
+            // Stop observing the element once it's visible so the animation doesn't repeat
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe all project sections
-document.querySelectorAll('.project').forEach(project => {
-    observer.observe(project);
+// Observe all sections with the class 'animated-section'
+document.querySelectorAll('.animated-section').forEach(section => {
+    observer.observe(section);
 });
+
+// --- NEW: Typing Animation using Typed.js ---
+const typedOptions = {
+    strings: [
+        'Data Scientist',
+        'Machine Learning Geek',
+        'Martial Artist'
+    ],
+    typeSpeed: 70,       // How fast it types
+    backSpeed: 40,       // How fast it deletes
+    loop: true,          // Loop the animation forever
+    backDelay: 1500,     // Wait 1.5s before deleting
+    showCursor: true
+};
+
+const typed = new Typed('#typed-text', typedOptions);
