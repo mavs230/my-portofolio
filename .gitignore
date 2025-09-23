@@ -1,0 +1,7 @@
+ # Personal Documents
+*.pdf
+*.docx
+*.jpeg
+
+# Ignore temporary office files
+~$*
